@@ -1,0 +1,526 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Leonardo Persan</title>
+    <!-- Required meta tags -->
+    <meta>
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Font Awesome -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+        * {
+            padding: 0;
+            outline: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #272727;
+            font: 400 14px Roboto, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            color: #c4c4c4;
+        }
+
+        body > * {
+            width: 100%;
+            padding: 10px;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        input, button, textarea {
+            font: 400 14px Roboto, sans-serif;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        h1,h2,h3,h4,h5,h6 {
+            text-transform: uppercase;
+            position: relative;
+            padding-left: 0.9em;
+        }
+
+        h1::before,h2::before,h3::before,h4::before,h5::before,h6::before {
+            content: '> ';
+            margin-left: -0.9em;
+        }
+
+        h1::after,h2::after,h3::after,h4::after,h5::after,h6::after {
+            content: " ";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            height: 0;
+            width: 5em;
+            border-bottom: 0.1em solid;
+        }
+
+        h1 {
+            color: #4bb64b;
+            border-color: #4bb64b;
+        }
+
+        h2 {
+            color: #a72089;
+            border-color: #a72089;
+        }
+
+        h3 {
+            color: #d8bf4e;
+            border-color: #d8bf4e;
+        }
+
+        h4 {
+            color: #3fa1b3;
+            border-color: #3fa1b3;
+        }
+
+        .row {
+            margin: 0 -10px;
+        }
+
+        .row > * {
+            width: 100%;
+            padding: 0 10px;
+        }
+
+        .fa {
+            width: 18px;
+        }
+
+        .thumbnail {
+            padding: 5px;
+            background-color: #272727;
+        }
+
+        .rounded {
+            border-radius: 50%;
+        }
+
+        .progress {
+            width: 100%;
+            height: 1em;
+            border: 1px solid #1f1f1f;
+            border-radius: 10px;
+            background-color: #9f9f9f;
+        }
+
+        .progress > div {
+            border-radius: 10px;
+            background-color: #ffffff;
+            height: 100%;
+        }
+
+        .collapse-link .fa {
+            float: right;
+        }
+        .collapse-link .fa::before {
+            content: "\f067";
+        }
+
+        .collapse.active .collapse-link .fa::before {
+            content: '\f068';
+        }
+
+        .collapse-content {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.2s ease-in-out;
+        }
+
+        #about > div {
+            background-color:#3b3b3b;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        #data > div {
+            background-color:#3b3b3b;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        @media (min-width: 992px){
+
+            body {
+                display: flex;
+            }
+
+            .row {
+                display: flex;
+            }
+
+            #about {
+                width: 30%;
+                position: fixed;
+            }
+
+
+            #data {
+                width: 70%;
+                margin-left: 30%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="about">
+        <div>
+            <!-- Foto -->
+            <div>
+                <img class="thumbnail rounded" src="images/foto.jpg">
+            </div>
+            <!-- Nome -->
+            <h1>Leonardo Persan</h1>
+            <!-- Sobre -->
+            <h2>Sobre</h2>
+            <p>
+                Formado em Análise e Desenvolvimento de Sistemas, experiência em programação Web (PHP, MySQL, HTML,
+                JS, CSS),
+                Framework Laravel, versionamento com GIT e servidores Linux.
+            </p>
+            <!-- Contato -->
+            <h2>Contatos</h2>
+            <ul>
+                <li>
+                    <a href="https://api.whatsapp.com/send?phone=5518997998362">
+                        <strong><i class="fa fa-phone" aria-hidden="true"></i></strong>
+                        (18) 99799-8362
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:leopersancode@gmail.com">
+                        <strong><i class="fa fa-envelope" aria-hidden="true"></i></strong>
+                        leopersancode@gmail.com
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/leonardopersan/">
+                        <strong><i class="fa fa-linkedin" aria-hidden="true"></i></strong>
+                        @leonardopersan
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/leonardopersan">
+                        <strong><i class="fa fa-facebook" aria-hidden="true"></i></strong>
+                        @leonardopersan
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/LeoPersan">
+                        <strong><i class="fa fa-github" aria-hidden="true"></i></strong>
+                        @LeoPersan
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="data">
+        <div>
+            <div>
+                <!-- Códigos -->
+                <h2>Códigos</h2>
+            </div>
+            <div>
+                <!-- Experiência -->
+                <h2>Experiência</h2>
+                <div>
+                    <div class="collapse">
+                        <div>
+                            <a class="collapse-link" href="#ControlAltWebContent">
+                                <h4>
+                                    Desenvolvedor de Sistemas <small> / Control Alt Web, Ribeirão Preto - SP</small>
+                                    <i class="fa" aria-hidden="true"></i>
+                                </h4>
+                            </a>
+                        </div>
+                        <div id="ControlAltWebContent" class="collapse-content">
+                            <div>
+                                <span>[ABR/2017] – [ATUAL]</span> - Desenvolvendo de sites institucionais e sistemas de controle interno, utilizando Framework Laravel.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse">
+                        <div>
+                            <a class="collapse-link" href="#Avitis">
+                                <h4>
+                                    Desenvolvedor de Sistemas <small> / Avitis LTDA - ME, Campinas - SP</small>
+                                    <i class="fa" aria-hidden="true"></i>
+                                </h4>
+                            </a>
+                        </div>
+                        <div id="Avitis" class="collapse-content">
+                            <div>
+                                <span>[SET/2017] - [OUT/2018]</span> - Desenvolvedor com foco em CRM, utilizando Framework Laravel e CMS SuiteCRM.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse">
+                        <div>
+                            <a class="collapse-link" href="#abcRede">
+                                <h4>
+                                    Auxiliar Técnico <small> / abcRede LTDA - ME, Tupi Paulista - SP</small>
+                                    <i class="fa" aria-hidden="true"></i>
+                                </h4>
+                            </a>
+                        </div>
+                        <div id="abcRede" class="collapse-content">
+                            <div>
+                                <span>[Nov/2010] - [SET/2017]</span> - Inicialmente instalando e prestando suporte de internet em clientes, equipamento Ubiquiti, posteriormente desenvolvendo sistemas web, PHP+MySQL, com experiência em servidores Linux e Shell Script.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse">
+                        <div>
+                            <a class="collapse-link" href="#Lanna">
+                                <h4>
+                                    Auxiliar de TI <small> / Lanna World Brasil Comércio e Armarinhos LTDA, São Paulo - SP</small>
+                                    <i class="fa" aria-hidden="true"></i>
+                                </h4>
+                            </a>
+                        </div>
+                        <div id="Lanna" class="collapse-content">
+                            <div>
+                                <span>[OUT/2008] – [OUT/2009]</span> - Manutenção de computadores, impressoras, rede e
+                                auxílio na administração de sistema, desenvolvido em Delphi.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <!-- Cursos/Certificados -->
+                <h2>Cursos/Certificados</h2>
+                <ul>
+                    <li>
+                        <h4>
+                            Análise e Desenvolvimento de Sistemas <small> / Cesumar, EAD</small>
+                        </h4>
+                        <p>
+                            <span>[OUT/2008] – [OUT/2009]</span>
+                        </p>
+                    </li>
+                    <li>
+                        <h4>
+                            Gestão de Projetos <small> / Veduca, EAD</small>
+                        </h4>
+                        <p>
+                            <span>[OUT/2008] – [OUT/2009]</span>
+                        </p>
+                    </li>
+                    <li>
+                        <h4>
+                            Curso de SEO Completo <small> / Udemy, EAD</small>
+                        </h4>
+                        <p>
+                            <span>[OUT/2008] – [OUT/2009]</span>
+                        </p>
+                    </li>
+                    <li>
+                        <h4>
+                            Segurança em PHP <small> / 4Linux, EAD</small>
+                        </h4>
+                        <p>
+                            <span>[OUT/2008] – [OUT/2009]</span>
+                        </p>
+                    </li>
+                    <li>
+                        <h4>
+                            Desenvolvimento Web com PHP <small> / 4Linux, EAD</small>
+                        </h4>
+                        <p>
+                            <span>[OUT/2008] – [OUT/2009]</span>
+                        </p>
+                    </li>
+                    <li>
+                        <h4>
+                            Desenvolvimento Orientado a objetos com PHP <small> / 4Linux, EAD</small>
+                        </h4>
+                        <p>
+                            <span>[OUT/2008] – [OUT/2009]</span>
+                        </p>
+                    </li>
+                    <li>
+                        <h4>
+                            Desenvolvimento Enterprise com PHP <small> / 4Linux, EAD</small>
+                        </h4>
+                        <p>
+                            <span>[OUT/2008] – [OUT/2009]</span>
+                        </p>
+                    </li>
+                    <li>
+                        <h4>
+                            Construindo um PBX IP na prática com Asterisk <small> / 4Linux, Presencial</small>
+                        </h4>
+                        <p>
+                            <span>[OUT/2008] – [OUT/2009]</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <!-- Habilidades -->
+            <div>
+                <h2>Habilidades</h2>
+                <div class="row">
+                    <ul>
+                        <li>
+                            <strong>PHP:</strong>
+                            <div class="progress">
+                                <div progress="81" class="bar"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>HTML:</strong>
+                            <div class="progress">
+                                <div progress="81" class="bar"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>JS:</strong>
+                            <div class="progress">
+                                <div progress="61" class="bar"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Docker:</strong>
+                            <div class="progress">
+                                <div progress="41" class="bar"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>ReactJS:</strong>
+                            <div class="progress">
+                                <div progress="41" class="bar"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>AWS:</strong>
+                            <div class="progress">
+                                <div progress="21" class="bar"></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <strong>Laravel:</strong>
+                            <div class="progress">
+                                <div progress="81" class="bar"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>CSS:</strong>
+                            <div class="progress">
+                                <div progress="61" class="bar"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Git:</strong>
+                            <div class="progress">
+                                <div progress="61" class="bar"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Linux:</strong>
+                            <div class="progress">
+                                <div progress="41" class="bar"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>Python:</strong>
+                            <div class="progress">
+                                <div progress="21" class="bar"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <strong>React Native:</strong>
+                            <div class="progress">
+                                <div progress="21" class="bar"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <!-- Interesses -->
+                <h2>Interesses</h2>
+                <ul>
+                    <li>RPG</li>
+                    <li>Fantasia Medieval</li>
+                    <li>Livros</li>
+                    <li>Rotaract</li>
+                </ul>
+            </div>
+            <div>
+                <!-- Interesses -->
+                <h2>Outras Informações</h2>
+                <ul>
+                    <li>SITES DESENVOLVIDOS: SENERP.COM.BR, TRIPLES.COM.BR, CISCOMERAKI.COMSTOR.COM, RESOLV.COM.BR,
+                        FAMOSAPIZZA.COM.BR, LIBERALFM.COM.BR, OBJETIVOJUNQUEIROPOLIS.COM.BR, HOTELDASDRACENAS.COM.BR,
+                        VALDOMIRONUNES.COM.BR, OBJETIVOTUPIPAULISTA.COM.BR. SISTEMAS DESENVOLVIDOS: SISTEMA ON-LINE DE
+                        DOAÇÕES E CUPONS DE DESCONTO, API DE CONTAGEM DE ESTOQUE PARA APP DE DISTRIBUIDORA, DIVERSOS
+                        RELATÓRIOS DE CRM COM SUITECRM, SISTEMA DE BILHETAGEM DE LIGAÇÕES COM PABX(ASTERISK), ENVIO DE
+                        SMS, MONITORAMENTO DE SERVIDORES , SISTEMA DE BACKUP E COLETA DE INFORMAÇÕES EM EQUIPAMENTOS
+                        UBIQUITI.</li>
+                    <li>PARTICIPO DO ROTARACT CLUB DE TUPI PAULISTA, JÁ EXERCI OS CARGOS DE DIRETOR DE PROTOCOLO,
+                        DIRETOR DE PROJETOS, VICE-PRESIDENTE E PRESIDENTE</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        let collapses = document.querySelectorAll('.collapse');
+        collapses.forEach(function (collapse) {
+            let link = collapse.querySelector('.collapse-link');
+            let content = collapse.querySelector('.collapse-content');
+            link.addEventListener('click',function (e) {
+                e.preventDefault();
+                if (collapse.classList.contains('active')) {
+                    collapse.classList.remove('active');
+                    content.style.maxHeight = 0;
+                } else {
+                    collapse.classList.add('active');
+                    content.style.maxHeight = content.scrollHeight+'px';
+                }
+            });
+        });
+        let progresses = document.querySelectorAll('.progress');
+        progresses.forEach(function (progress) {
+            let bar = progress.querySelector('.bar');
+            let percentual = bar.attributes.progress.value;
+            bar.style.width = percentual+'%';
+            if (percentual > 80) {
+                bar.style.backgroundColor = '#4bb64b';
+            } else if (percentual > 60) {
+                bar.style.backgroundColor = '#3fa1b3';
+            } else if (percentual > 40) {
+                bar.style.backgroundColor = '#d8bf4e';
+            } else if (percentual > 20) {
+                bar.style.backgroundColor = '#a72089';
+            } else {
+                bar.style.backgroundColor = '#FF0000';
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,526 +1,1028 @@
 <!doctype html>
-<html>
+<html class="no-js" lang="en">
 
 <head>
-    <title>Leonardo Persan</title>
-    <!-- Required meta tags -->
-    <meta>
-    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="M_Adnan" />
+	<!-- Document Title -->
+	<title>LeoPersan</title>
 
-    <!-- Font Awesome -->
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <style>
-        * {
-            padding: 0;
-            outline: 0;
-            box-sizing: border-box;
-        }
+	<!-- StyleSheets -->
+	<link rel="stylesheet" href="css/ionicons.min.css">
+	<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
 
-        body {
-            background: #272727;
-            font: 400 14px Roboto, sans-serif;
-            -webkit-font-smoothing: antialiased;
-            color: #c4c4c4;
-        }
+	<!-- FontsOnline -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-        body > * {
-            width: 100%;
-            padding: 10px;
-        }
-
-        a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        input, button, textarea {
-            font: 400 14px Roboto, sans-serif;
-        }
-
-        button {
-            cursor: pointer;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        li {
-            margin: 10px 0;
-        }
-
-        img {
-            width: 100%;
-        }
-
-        h1,h2,h3,h4,h5,h6 {
-            text-transform: uppercase;
-            position: relative;
-            padding-left: 0.9em;
-        }
-
-        h1::before,h2::before,h3::before,h4::before,h5::before,h6::before {
-            content: '> ';
-            margin-left: -0.9em;
-        }
-
-        h1::after,h2::after,h3::after,h4::after,h5::after,h6::after {
-            content: " ";
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            height: 0;
-            width: 5em;
-            border-bottom: 0.1em solid;
-        }
-
-        h1 {
-            color: #4bb64b;
-            border-color: #4bb64b;
-        }
-
-        h2 {
-            color: #a72089;
-            border-color: #a72089;
-        }
-
-        h3 {
-            color: #d8bf4e;
-            border-color: #d8bf4e;
-        }
-
-        h4 {
-            color: #3fa1b3;
-            border-color: #3fa1b3;
-        }
-
-        .row {
-            margin: 0 -10px;
-        }
-
-        .row > * {
-            width: 100%;
-            padding: 0 10px;
-        }
-
-        .fa {
-            width: 18px;
-        }
-
-        .thumbnail {
-            padding: 5px;
-            background-color: #272727;
-        }
-
-        .rounded {
-            border-radius: 50%;
-        }
-
-        .progress {
-            width: 100%;
-            height: 1em;
-            border: 1px solid #1f1f1f;
-            border-radius: 10px;
-            background-color: #9f9f9f;
-        }
-
-        .progress > div {
-            border-radius: 10px;
-            background-color: #ffffff;
-            height: 100%;
-        }
-
-        .collapse-link .fa {
-            float: right;
-        }
-        .collapse-link .fa::before {
-            content: "\f067";
-        }
-
-        .collapse.active .collapse-link .fa::before {
-            content: '\f068';
-        }
-
-        .collapse-content {
-            overflow: hidden;
-            max-height: 0;
-            transition: max-height 0.2s ease-in-out;
-        }
-
-        #about > div {
-            background-color:#3b3b3b;
-            padding: 15px;
-            border-radius: 8px;
-        }
-
-        #data > div {
-            background-color:#3b3b3b;
-            padding: 15px;
-            border-radius: 8px;
-        }
-
-        @media (min-width: 992px){
-
-            body {
-                display: flex;
-            }
-
-            .row {
-                display: flex;
-            }
-
-            #about {
-                width: 30%;
-                position: fixed;
-            }
-
-
-            #data {
-                width: 70%;
-                margin-left: 30%;
-            }
-        }
-    </style>
+	<!-- JavaScripts -->
+	<script src="js/vendors/modernizr.js"></script>
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
 </head>
 
 <body>
-    <div id="about">
-        <div>
-            <!-- Foto -->
-            <div>
-                <img class="thumbnail rounded" src="images/foto.jpg">
-            </div>
-            <!-- Nome -->
-            <h1>Leonardo Persan</h1>
-            <!-- Sobre -->
-            <h2>Sobre</h2>
-            <p>
-                Formado em Análise e Desenvolvimento de Sistemas, experiência em programação Web (PHP, MySQL, HTML,
-                JS, CSS),
-                Framework Laravel, versionamento com GIT e servidores Linux.
-            </p>
-            <!-- Contato -->
-            <h2>Contatos</h2>
-            <ul>
-                <li>
-                    <a href="https://api.whatsapp.com/send?phone=5518997998362">
-                        <strong><i class="fa fa-phone" aria-hidden="true"></i></strong>
-                        (18) 99799-8362
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:leopersancode@gmail.com">
-                        <strong><i class="fa fa-envelope" aria-hidden="true"></i></strong>
-                        leopersancode@gmail.com
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/leonardopersan/">
-                        <strong><i class="fa fa-linkedin" aria-hidden="true"></i></strong>
-                        @leonardopersan
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/leonardopersan">
-                        <strong><i class="fa fa-facebook" aria-hidden="true"></i></strong>
-                        @leonardopersan
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/LeoPersan">
-                        <strong><i class="fa fa-github" aria-hidden="true"></i></strong>
-                        @LeoPersan
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div id="data">
-        <div>
-            <div>
-                <!-- Códigos -->
-                <h2>Códigos</h2>
-            </div>
-            <div>
-                <!-- Experiência -->
-                <h2>Experiência</h2>
-                <div>
-                    <div class="collapse">
-                        <div>
-                            <a class="collapse-link" href="#ControlAltWebContent">
-                                <h4>
-                                    Desenvolvedor de Sistemas <small> / Control Alt Web, Ribeirão Preto - SP</small>
-                                    <i class="fa" aria-hidden="true"></i>
-                                </h4>
-                            </a>
-                        </div>
-                        <div id="ControlAltWebContent" class="collapse-content">
-                            <div>
-                                <span>[ABR/2017] – [ATUAL]</span> - Desenvolvendo de sites institucionais e sistemas de controle interno, utilizando Framework Laravel.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="collapse">
-                        <div>
-                            <a class="collapse-link" href="#Avitis">
-                                <h4>
-                                    Desenvolvedor de Sistemas <small> / Avitis LTDA - ME, Campinas - SP</small>
-                                    <i class="fa" aria-hidden="true"></i>
-                                </h4>
-                            </a>
-                        </div>
-                        <div id="Avitis" class="collapse-content">
-                            <div>
-                                <span>[SET/2017] - [OUT/2018]</span> - Desenvolvedor com foco em CRM, utilizando Framework Laravel e CMS SuiteCRM.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="collapse">
-                        <div>
-                            <a class="collapse-link" href="#abcRede">
-                                <h4>
-                                    Auxiliar Técnico <small> / abcRede LTDA - ME, Tupi Paulista - SP</small>
-                                    <i class="fa" aria-hidden="true"></i>
-                                </h4>
-                            </a>
-                        </div>
-                        <div id="abcRede" class="collapse-content">
-                            <div>
-                                <span>[Nov/2010] - [SET/2017]</span> - Inicialmente instalando e prestando suporte de internet em clientes, equipamento Ubiquiti, posteriormente desenvolvendo sistemas web, PHP+MySQL, com experiência em servidores Linux e Shell Script.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="collapse">
-                        <div>
-                            <a class="collapse-link" href="#Lanna">
-                                <h4>
-                                    Auxiliar de TI <small> / Lanna World Brasil Comércio e Armarinhos LTDA, São Paulo - SP</small>
-                                    <i class="fa" aria-hidden="true"></i>
-                                </h4>
-                            </a>
-                        </div>
-                        <div id="Lanna" class="collapse-content">
-                            <div>
-                                <span>[OUT/2008] – [OUT/2009]</span> - Manutenção de computadores, impressoras, rede e
-                                auxílio na administração de sistema, desenvolvido em Delphi.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <!-- Cursos/Certificados -->
-                <h2>Cursos/Certificados</h2>
-                <ul>
-                    <li>
-                        <h4>
-                            Análise e Desenvolvimento de Sistemas <small> / Cesumar, EAD</small>
-                        </h4>
-                        <p>
-                            <span>[OUT/2008] – [OUT/2009]</span>
-                        </p>
-                    </li>
-                    <li>
-                        <h4>
-                            Gestão de Projetos <small> / Veduca, EAD</small>
-                        </h4>
-                        <p>
-                            <span>[OUT/2008] – [OUT/2009]</span>
-                        </p>
-                    </li>
-                    <li>
-                        <h4>
-                            Curso de SEO Completo <small> / Udemy, EAD</small>
-                        </h4>
-                        <p>
-                            <span>[OUT/2008] – [OUT/2009]</span>
-                        </p>
-                    </li>
-                    <li>
-                        <h4>
-                            Segurança em PHP <small> / 4Linux, EAD</small>
-                        </h4>
-                        <p>
-                            <span>[OUT/2008] – [OUT/2009]</span>
-                        </p>
-                    </li>
-                    <li>
-                        <h4>
-                            Desenvolvimento Web com PHP <small> / 4Linux, EAD</small>
-                        </h4>
-                        <p>
-                            <span>[OUT/2008] – [OUT/2009]</span>
-                        </p>
-                    </li>
-                    <li>
-                        <h4>
-                            Desenvolvimento Orientado a objetos com PHP <small> / 4Linux, EAD</small>
-                        </h4>
-                        <p>
-                            <span>[OUT/2008] – [OUT/2009]</span>
-                        </p>
-                    </li>
-                    <li>
-                        <h4>
-                            Desenvolvimento Enterprise com PHP <small> / 4Linux, EAD</small>
-                        </h4>
-                        <p>
-                            <span>[OUT/2008] – [OUT/2009]</span>
-                        </p>
-                    </li>
-                    <li>
-                        <h4>
-                            Construindo um PBX IP na prática com Asterisk <small> / 4Linux, Presencial</small>
-                        </h4>
-                        <p>
-                            <span>[OUT/2008] – [OUT/2009]</span>
-                        </p>
-                    </li>
-                </ul>
-            </div>
-            <!-- Habilidades -->
-            <div>
-                <h2>Habilidades</h2>
-                <div class="row">
-                    <ul>
-                        <li>
-                            <strong>PHP:</strong>
-                            <div class="progress">
-                                <div progress="81" class="bar"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <strong>HTML:</strong>
-                            <div class="progress">
-                                <div progress="81" class="bar"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <strong>JS:</strong>
-                            <div class="progress">
-                                <div progress="61" class="bar"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <strong>Docker:</strong>
-                            <div class="progress">
-                                <div progress="41" class="bar"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <strong>ReactJS:</strong>
-                            <div class="progress">
-                                <div progress="41" class="bar"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <strong>AWS:</strong>
-                            <div class="progress">
-                                <div progress="21" class="bar"></div>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <strong>Laravel:</strong>
-                            <div class="progress">
-                                <div progress="81" class="bar"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <strong>CSS:</strong>
-                            <div class="progress">
-                                <div progress="61" class="bar"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <strong>Git:</strong>
-                            <div class="progress">
-                                <div progress="61" class="bar"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <strong>Linux:</strong>
-                            <div class="progress">
-                                <div progress="41" class="bar"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <strong>Python:</strong>
-                            <div class="progress">
-                                <div progress="21" class="bar"></div>
-                            </div>
-                        </li>
-                        <li>
-                            <strong>React Native:</strong>
-                            <div class="progress">
-                                <div progress="21" class="bar"></div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div>
-                <!-- Interesses -->
-                <h2>Interesses</h2>
-                <ul>
-                    <li>RPG</li>
-                    <li>Fantasia Medieval</li>
-                    <li>Livros</li>
-                    <li>Rotaract</li>
-                </ul>
-            </div>
-            <div>
-                <!-- Interesses -->
-                <h2>Outras Informações</h2>
-                <ul>
-                    <li>SITES DESENVOLVIDOS: SENERP.COM.BR, TRIPLES.COM.BR, CISCOMERAKI.COMSTOR.COM, RESOLV.COM.BR,
-                        FAMOSAPIZZA.COM.BR, LIBERALFM.COM.BR, OBJETIVOJUNQUEIROPOLIS.COM.BR, HOTELDASDRACENAS.COM.BR,
-                        VALDOMIRONUNES.COM.BR, OBJETIVOTUPIPAULISTA.COM.BR. SISTEMAS DESENVOLVIDOS: SISTEMA ON-LINE DE
-                        DOAÇÕES E CUPONS DE DESCONTO, API DE CONTAGEM DE ESTOQUE PARA APP DE DISTRIBUIDORA, DIVERSOS
-                        RELATÓRIOS DE CRM COM SUITECRM, SISTEMA DE BILHETAGEM DE LIGAÇÕES COM PABX(ASTERISK), ENVIO DE
-                        SMS, MONITORAMENTO DE SERVIDORES , SISTEMA DE BACKUP E COLETA DE INFORMAÇÕES EM EQUIPAMENTOS
-                        UBIQUITI.</li>
-                    <li>PARTICIPO DO ROTARACT CLUB DE TUPI PAULISTA, JÁ EXERCI OS CARGOS DE DIRETOR DE PROTOCOLO,
-                        DIRETOR DE PROJETOS, VICE-PRESIDENTE E PRESIDENTE</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <script>
-        let collapses = document.querySelectorAll('.collapse');
-        collapses.forEach(function (collapse) {
-            let link = collapse.querySelector('.collapse-link');
-            let content = collapse.querySelector('.collapse-content');
-            link.addEventListener('click',function (e) {
-                e.preventDefault();
-                if (collapse.classList.contains('active')) {
-                    collapse.classList.remove('active');
-                    content.style.maxHeight = 0;
-                } else {
-                    collapse.classList.add('active');
-                    content.style.maxHeight = content.scrollHeight+'px';
-                }
-            });
-        });
-        let progresses = document.querySelectorAll('.progress');
-        progresses.forEach(function (progress) {
-            let bar = progress.querySelector('.bar');
-            let percentual = bar.attributes.progress.value;
-            bar.style.width = percentual+'%';
-            if (percentual > 80) {
-                bar.style.backgroundColor = '#4bb64b';
-            } else if (percentual > 60) {
-                bar.style.backgroundColor = '#3fa1b3';
-            } else if (percentual > 40) {
-                bar.style.backgroundColor = '#d8bf4e';
-            } else if (percentual > 20) {
-                bar.style.backgroundColor = '#a72089';
-            } else {
-                bar.style.backgroundColor = '#FF0000';
-            }
-        });
-    </script>
+
+	<!-- Page Wrapper -->
+	<div id="wrap">
+
+		<!-- Content -->
+		<main class="cd-main-content">
+			<div id="content" class="bg">
+				<div class="resume">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="side-bar">
+									<h5 class="tittle">Dados Pessoais</h5>
+									<img src="images/foto.jpg" class="img-responsive" alt="">
+									<ul class="personal-info">
+										<li>
+											<p> <span> Nome</span> Leonardo Persan </p>
+										</li>
+										<li>
+											<p> <span> Idade</span> 29 Anos </p>
+										</li>
+										<li>
+											<p> <span> Moro em</span> Tupi Paulista, São Paulo </p>
+										</li>
+										<li>
+											<p> <span> Trabalho há </span> 14 Anos </p>
+										</li>
+										<li>
+											<p> <span> Escolaridade</span> Superior </p>
+										</li>
+										<li>
+											<p>
+												<span> Telefone</span>
+												<a href="https://api.whatsapp.com/send?phone=5518997998362"
+													target="_blank"> +55 18 9 9799 8362</a>
+											</p>
+										</li>
+										<li>
+											<p>
+												<span> E-mail</span>
+												<a href="mailto:leopso1990@gmail.com" target="_blank">
+													leopso1990@gmail.com</a>
+											</p>
+										</li>
+									</ul>
+									<!-- <h5 class="tittle">Anexos</h5>
+									<div class="attach bor-btm padding-25">
+										<ul>
+											<li>
+												<p>
+													<img src="images/pdf-icon.jpg" alt=""> Curriculum.pdf
+													<a target="_blank"
+														href="https://drive.google.com/uc?id=1rheyhuBBEEgTrrWGnTfp0k0FOk8oJ10E&export=download"><i
+															class="fa fa-cloud-download"></i></a>
+													<a target="_blank"
+														href="https://drive.google.com/file/d/1rheyhuBBEEgTrrWGnTfp0k0FOk8oJ10E/view?usp=sharing."><i
+															class="fa fa-eye"></i></a>
+												</p>
+											</li>
+											<li>
+												<p>
+													<img src="images/pdf-icon.jpg" alt=""> Curriculum-Rotário.pdf
+													<a target="_blank"
+														href="https://drive.google.com/uc?id=1n6zEjicVagBAqfIv1PKhgPmhsIgqxyLP&export=download"><i
+															class="fa fa-cloud-download"></i></a>
+													<a target="_blank"
+														href="https://drive.google.com/file/d/1n6zEjicVagBAqfIv1PKhgPmhsIgqxyLP/view?usp=sharing"><i
+															class="fa fa-eye"></i></a>
+												</p>
+											</li>
+											<li>
+												<p>
+													<img src="images/pdf-icon.jpg" alt=""> Certificados.pdf
+													<a target="_blank"
+														href="https://drive.google.com/uc?id=1WMbIBWv69aDRhpI2F4I657zAuX9MAdiW&export=download"><i
+															class="fa fa-cloud-download"></i></a>
+													<a target="_blank"
+														href="https://drive.google.com/file/d/1WMbIBWv69aDRhpI2F4I657zAuX9MAdiW/view?usp=sharing"><i
+															class="fa fa-eye"></i></a>
+												</p>
+											</li>
+										</ul>
+									</div> -->
+									<h5 class="tittle">Redes Sociais</h5>
+									<div class="social-icon bor-btm padding-25">
+										<ul>
+											<li> <a target="_blank" href="https://www.facebook.com/leonardopersan"> <i
+														class="fa fa-facebook"></i></a> </li>
+											<li> <a target="_blank" href="https://www.linkedin.com/in/leonardopersan">
+													<i class="fa fa-linkedin"></i></a> </li>
+											<li> <a target="_blank" href="https://github.com/leopersan"> <i
+														class="fa fa-github"></i></a> </li>
+										</ul>
+									</div>
+									<!-- <h5 class="tittle">Contato</h5>
+									<div class="contact padding-25">
+										<form role="form" id="contact_form" class="contact-form"
+											action="mailto:leopso1990@gmail.com" target="_blank">
+											<ul class="row">
+												<li class="col-sm-12">
+													<label>
+														<input type="text" class="form-control" name="name" id="name"
+															placeholder="Nome">
+													</label>
+												</li>
+												<li class="col-sm-12">
+													<label>
+														<input type="text" class="form-control" name="email" id="email"
+															placeholder="Email">
+													</label>
+												</li>
+												<li class="col-sm-12">
+													<label>
+														<input type="text" class="form-control" name="subject"
+															id="subject" placeholder="Assunto">
+													</label>
+												</li>
+												<li class="col-sm-12">
+													<label>
+														<textarea class="form-control" name="body" id="body" rows="5"
+															placeholder="Mensagem"></textarea>
+													</label>
+												</li>
+												<li class="col-sm-12">
+													<button type="submit" value="submit" id="btn_submit">Enviar</button>
+												</li>
+											</ul>
+										</form>
+									</div> -->
+								</div>
+							</div>
+							<div class="col-md-8">
+								<nav>
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+										data-target="#nav-tabis" aria-expanded="false">
+										<span class="tittle">MENU</span>
+										<span class="fa fa-navicon icon-nav"></span>
+									</button>
+									<div class="collapse navbar-collapse" id="nav-tabis">
+										<ul class="isop-filter nav nav-pills">
+											<li role="presentation" class="active">
+												<a href="#about-me" aria-controls="about-me" role="tab"
+													data-toggle="tab">
+													<i class="icon-user"></i> DADOS
+												</a>
+											</li>
+											<li role="presentation">
+												<a href="#resume" aria-controls="resume" role="tab" data-toggle="tab">
+													<i class="icon-book-open"></i> CURRÍCULO
+												</a>
+											</li>
+											<!-- <li role="presentation">
+												<a href="#portfolio" aria-controls="portfolio" role="tab"
+													data-toggle="tab">
+													<i class="icon-rocket"></i> PORTIFÓLIO
+												</a>
+											</li>
+											<li role="presentation">
+												<a href="#blog" aria-controls="blog" role="tab" data-toggle="tab">
+													<i class="icon-note"></i> BLOG
+												</a>
+											</li>
+											<li role="presentation">
+												<a href="#contact" aria-controls="contact" role="tab" data-toggle="tab">
+													<i class="icon-pencil"></i> CONTATO
+												</a>
+											</li> -->
+										</ul>
+									</div>
+								</nav>
+
+								<div class="tab-content">
+									<div role="tabpanel" class="tab-pane fade in active" id="about-me">
+										<div class="inside-sec">
+											<h5 class="tittle">Dados Pessoais</h5>
+											<section class="about-me padding-top-10">
+
+												<ul class="personal-info">
+													<li>
+														<p> <span> Nome</span> Leonardo Persan </p>
+													</li>
+													<li>
+														<p> <span> Idade</span> 29 Anos </p>
+													</li>
+													<li>
+														<p> <span> Moro em</span> Tupi Paulista, São Paulo </p>
+													</li>
+													<li>
+														<p> <span> Trabalho há </span> 14 Anos </p>
+													</li>
+													<li>
+														<p> <span> Escolaridade</span> Superior </p>
+													</li>
+													<li>
+														<p>
+															<span> Telefone</span>
+															<a href="https://api.whatsapp.com/send?phone=5518997998362"
+																target="_blank"> +55 18 9-9799-8362</a>
+														</p>
+													</li>
+													<li>
+														<p>
+															<span> E-mail</span>
+															<a href="mailto:leopso1990@gmail.com" target="_blank">
+																leopso1990@gmail.com</a>
+														</p>
+													</li>
+												</ul>
+
+												<h5 class="tittle">Desenvolvedor de Software</h5>
+												<div class="padding-20">
+													<p>
+														Formado em Análise e Desenvolvimento de Sistemas, experiência em
+														programação Web (PHP, MySQL, HTML, JS, CSS), Framework Laravel,
+														versionamento com GIT e servidores Linux.
+													</p>
+												</div>
+												<!-- <h5 class="tittle">Serviços</h5>
+												<div class="row padding-20 margin-top-50">
+													<div class="col-md-4 padding-20 text-center">
+														<div class="icon-box i-large ib-black">
+															<div class="ib-icon"> <i class="fa fa-whatsapp"></i> </div>
+															<div class="ib-info">
+																<h4 class="h6">WEB DEVELOPMENT</h4>
+																<p>
+																	We have created the new macbook psd version with scalable vector shapes.
+																</p>
+															</div>
+														</div>
+													</div>
+												</div> -->
+												<h5 class="tittle">Habilidades</h5>
+												<div class="panel-group accordion padding-20 col-sm-6" id="accordion">
+													<div class="panel panel-default">
+														<div class="row">
+															<div class="col-sm-4">
+																<div class="panel-heading">
+																	<h4 class="panel-title">
+																		<a data-toggle="collapse"
+																			data-parent="#accordion" href="#PHP"
+																			class="collapsed">
+																			PHP
+																		</a>
+																	</h4>
+																</div>
+															</div>
+															<div class="col-sm-8">
+																<div class="progress">
+																	<div class="progress-bar" role="progressbar"
+																		aria-valuenow="80" aria-valuemin="0"
+																		aria-valuemax="100" style="width: 80%;">
+																		<span class="sr-only">80% Complete</span>
+																	</div>
+																</div>
+																<!-- <div id="PHP" class="panel-collapse collapse">
+																	<div class="panel-body">
+																		<p>
+																			Lorem ipsum dolor sit amet, consectetur
+																			adipiscing elit. Proin nibh augue, suscipit
+																			a, scelerisque sed, lacinia in, mi. Cras vel
+																			lorem.
+																		</p>
+																	</div>
+																</div> -->
+															</div>
+														</div>
+													</div>
+													<div class="panel panel-default">
+														<div class="row">
+															<div class="col-sm-4">
+																<div class="panel-heading">
+																	<h4 class="panel-title">
+																		<a data-toggle="collapse"
+																			data-parent="#accordion" href="#HTML"
+																			class="collapsed">
+																			HTML
+																		</a>
+																	</h4>
+																</div>
+															</div>
+															<div class="col-sm-8">
+																<div class="progress">
+																	<div class="progress-bar" role="progressbar"
+																		aria-valuenow="80" aria-valuemin="0"
+																		aria-valuemax="100" style="width: 80%;">
+																		<span class="sr-only">80% Complete</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="panel panel-default">
+														<div class="row">
+															<div class="col-sm-4">
+																<div class="panel-heading">
+																	<h4 class="panel-title">
+																		<a data-toggle="collapse"
+																			data-parent="#accordion" href="#JS"
+																			class="collapsed">
+																			JS
+																		</a>
+																	</h4>
+																</div>
+															</div>
+															<div class="col-sm-8">
+																<div class="progress">
+																	<div class="progress-bar" role="progressbar"
+																		aria-valuenow="60" aria-valuemin="0"
+																		aria-valuemax="100" style="width: 60%;">
+																		<span class="sr-only">60% Complete</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="panel panel-default">
+														<div class="row">
+															<div class="col-sm-4">
+																<div class="panel-heading">
+																	<h4 class="panel-title">
+																		<a data-toggle="collapse"
+																			data-parent="#accordion" href="#Docker"
+																			class="collapsed">
+																			Docker
+																		</a>
+																	</h4>
+																</div>
+															</div>
+															<div class="col-sm-8">
+																<div class="progress">
+																	<div class="progress-bar" role="progressbar"
+																		aria-valuenow="40" aria-valuemin="0"
+																		aria-valuemax="100" style="width: 40%;">
+																		<span class="sr-only">40% Complete</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="panel panel-default">
+														<div class="row">
+															<div class="col-sm-4">
+																<div class="panel-heading">
+																	<h4 class="panel-title">
+																		<a data-toggle="collapse"
+																			data-parent="#accordion" href="#ReactJS"
+																			class="collapsed">
+																			ReactJS
+																		</a>
+																	</h4>
+																</div>
+															</div>
+															<div class="col-sm-8">
+																<div class="progress">
+																	<div class="progress-bar" role="progressbar"
+																		aria-valuenow="40" aria-valuemin="0"
+																		aria-valuemax="100" style="width: 40%;">
+																		<span class="sr-only">40% Complete</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="panel panel-default">
+														<div class="row">
+															<div class="col-sm-4">
+																<div class="panel-heading">
+																	<h4 class="panel-title">
+																		<a data-toggle="collapse"
+																			data-parent="#accordion" href="#AWS"
+																			class="collapsed">
+																			AWS
+																		</a>
+																	</h4>
+																</div>
+															</div>
+															<div class="col-sm-8">
+																<div class="progress">
+																	<div class="progress-bar" role="progressbar"
+																		aria-valuenow="20" aria-valuemin="0"
+																		aria-valuemax="100" style="width: 20%;">
+																		<span class="sr-only">20% Complete</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="panel-group accordion padding-20 col-sm-6" id="accordion">
+													<div class="panel panel-default">
+														<div class="row">
+															<div class="col-sm-4">
+																<div class="panel-heading">
+																	<h4 class="panel-title">
+																		<a data-toggle="collapse"
+																			data-parent="#accordion" href="#Laravel"
+																			class="collapsed">
+																			Laravel
+																		</a>
+																	</h4>
+																</div>
+															</div>
+															<div class="col-sm-8">
+																<div class="progress">
+																	<div class="progress-bar" role="progressbar"
+																		aria-valuenow="80" aria-valuemin="0"
+																		aria-valuemax="100" style="width: 80%;">
+																		<span class="sr-only">80% Complete</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="panel panel-default">
+														<div class="row">
+															<div class="col-sm-4">
+																<div class="panel-heading">
+																	<h4 class="panel-title">
+																		<a data-toggle="collapse"
+																			data-parent="#accordion" href="#CSS"
+																			class="collapsed">
+																			CSS
+																		</a>
+																	</h4>
+																</div>
+															</div>
+															<div class="col-sm-8">
+																<div class="progress">
+																	<div class="progress-bar" role="progressbar"
+																		aria-valuenow="60" aria-valuemin="0"
+																		aria-valuemax="100" style="width: 60%;">
+																		<span class="sr-only">60% Complete</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="panel panel-default">
+														<div class="row">
+															<div class="col-sm-4">
+																<div class="panel-heading">
+																	<h4 class="panel-title">
+																		<a data-toggle="collapse"
+																			data-parent="#accordion" href="#Git"
+																			class="collapsed">
+																			Git
+																		</a>
+																	</h4>
+																</div>
+															</div>
+															<div class="col-sm-8">
+																<div class="progress">
+																	<div class="progress-bar" role="progressbar"
+																		aria-valuenow="60" aria-valuemin="0"
+																		aria-valuemax="100" style="width: 60%;">
+																		<span class="sr-only">60% Complete</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="panel panel-default">
+														<div class="row">
+															<div class="col-sm-4">
+																<div class="panel-heading">
+																	<h4 class="panel-title">
+																		<a data-toggle="collapse"
+																			data-parent="#accordion" href="#Linux"
+																			class="collapsed">
+																			Linux
+																		</a>
+																	</h4>
+																</div>
+															</div>
+															<div class="col-sm-8">
+																<div class="progress">
+																	<div class="progress-bar" role="progressbar"
+																		aria-valuenow="40" aria-valuemin="0"
+																		aria-valuemax="100" style="width: 40%;">
+																		<span class="sr-only">40% Complete</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="panel panel-default">
+														<div class="row">
+															<div class="col-sm-4">
+																<div class="panel-heading">
+																	<h4 class="panel-title">
+																		<a data-toggle="collapse"
+																			data-parent="#accordion" href="#Python"
+																			class="collapsed">
+																			Python
+																		</a>
+																	</h4>
+																</div>
+															</div>
+															<div class="col-sm-8">
+																<div class="progress">
+																	<div class="progress-bar" role="progressbar"
+																		aria-valuenow="20" aria-valuemin="0"
+																		aria-valuemax="100" style="width: 20%;">
+																		<span class="sr-only">20% Complete</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="panel panel-default">
+														<div class="row">
+															<div class="col-sm-4">
+																<div class="panel-heading">
+																	<h4 class="panel-title">
+																		<a data-toggle="collapse"
+																			data-parent="#accordion" href="#ReactNative"
+																			class="collapsed">
+																			React Native
+																		</a>
+																	</h4>
+																</div>
+															</div>
+															<div class="col-sm-8">
+																<div class="progress">
+																	<div class="progress-bar" role="progressbar"
+																		aria-valuenow="20" aria-valuemin="0"
+																		aria-valuemax="100" style="width: 20%;">
+																		<span class="sr-only">20% Complete</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</section>
+										</div>
+									</div>
+
+									<div role="tabpanel" class="tab-pane fade" id="resume">
+										<div class="inside-sec">
+											<h5 class="tittle">Objetivo</h5>
+											<div class="bio-info padding-30">
+												<p>
+													Formado em Análise e Desenvolvimento de Sistemas, experiência em
+													programação Web (PHP, MySQL, HTML, JS, CSS), Framework Laravel,
+													versionamento com GIT e servidores Linux.
+												</p>
+											</div>
+										</div>
+										<div class="inside-sec margin-top-30">
+											<h5 class="tittle">Experiência</h5>
+											<div class="padding-30 exp-history">
+												<div class="exp">
+													<div class="media-left">
+														<span class="sun">Abr/2019 <br> Atual</span>
+													</div>
+													<div class="media-body">
+														<div class="company-logo">
+															<img src="images/controlaltweb.png" alt="Control Alt Web">
+														</div>
+														<h6>Desenvolvedor de Sistemas</h6>
+														<p>Control Alt Web</p>
+														<p>Ribeirão Preto, São Paulo, Brasil</p>
+														<p class="margin-top-10">
+															Desenvolvendo de sites institucionais e sistemas de controle
+															interno, utilizando Framework Laravel.
+														</p>
+													</div>
+												</div>
+												<div class="exp">
+													<div class="media-left">
+														<span class="sun">Set/2017 <br> Out/2018</span>
+													</div>
+													<div class="media-body">
+														<div class="company-logo">
+															<img src="images/avitis.png" alt="Avitis">
+														</div>
+														<h6>Desenvolvedor de Sistemas</h6>
+														<p>Avitis</p>
+														<p>Campinas, São Paulo, Brasil</p>
+														<p class="margin-top-10">
+															Desenvolvedor com foco em CRM, utilizando Framework Laravel
+															e CMS SuiteCRM.
+														</p>
+													</div>
+												</div>
+												<div class="exp">
+													<div class="media-left">
+														<span class="sun">Nov/2010 <br> Set/2017</span>
+													</div>
+													<div class="media-body">
+														<div class="company-logo">
+															<img src="images/abcrede.png" alt="abcRede Telecom">
+														</div>
+														<h6>Auxiliar Técnico</h6>
+														<p>abcRede Telecom</p>
+														<p>Tupi Paulista, São Paulo, Brasil</p>
+														<p class="margin-top-10">
+															Inicialmente instalando e prestando suporte de internet em
+															clientes, equipamento Ubiquiti, posteriormente desenvolvendo
+															sistemas web, PHP+MySQL, com experiência em servidores Linux
+															e Shell Script.
+														</p>
+													</div>
+												</div>
+												<div class="exp">
+													<div class="media-left">
+														<span class="sun">Out/2008 <br> Out/2009</span>
+													</div>
+													<div class="media-body">
+														<div class="company-logo">
+														</div>
+														<h6>Auxiliar de TI</h6>
+														<p>Lanna World Brasil Comércio e Armarinhos LTDA</p>
+														<p>São Paulo, São Paulo, Brasil</p>
+														<p class="margin-top-10">
+															Manutenção de computadores, impressoras, rede e auxílio na
+															administração de sistema, desenvolvido em Delphi.
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="inside-sec margin-top-30">
+											<h5 class="tittle">Formação / Cursos</h5>
+											<div class="padding-30 exp-history">
+												<div class="exp">
+													<div class="media-left"> <span class="sun">2002 - 2008</span> </div>
+													<div class="media-body">
+														<div class="company-logo">
+															<span class="diploma">
+																<i class="fa fa-graduation-cap"></i>
+																Download Diploma
+															</span>
+														</div>
+														<h6>
+															Análise e Desenvolvimento de Sistemas
+														</h6>
+														<p>Cesumar, EAD</p>
+														<!-- <p class="margin-top-10">
+															Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem. Etiam pellentesque aliquet tellus. Phasellus pharetra nulla ac diam (...)
+														</p> -->
+													</div>
+												</div>
+												<div class="exp">
+													<div class="media-left"> <span class="sun">2002 - 2008</span> </div>
+													<div class="media-body">
+														<div class="company-logo">
+															<a href="">
+																<span class="diploma">
+																	Download Certificado
+																</span>
+															</a>
+														</div>
+														<h6>
+															Gestão de Projetos
+														</h6>
+														<p>Veduca, EAD</p>
+													</div>
+												</div>
+												<div class="exp">
+													<div class="media-left"> <span class="sun">2002 - 2008</span> </div>
+													<div class="media-body">
+														<div class="company-logo">
+															<a href="">
+																<span class="diploma">
+																	Download Certificado
+																</span>
+															</a>
+														</div>
+														<h6>
+															Curso de SEO Completo
+														</h6>
+														<p>Udemy, EAD</p>
+													</div>
+												</div>
+												<div class="exp">
+													<div class="media-left"> <span class="sun">2002 - 2008</span> </div>
+													<div class="media-body">
+														<div class="company-logo">
+															<a href="">
+																<span class="diploma">
+																	Download Certificado
+																</span>
+															</a>
+														</div>
+														<h6>
+															Segurança em PHP
+														</h6>
+														<p>4Linux, EAD</p>
+													</div>
+												</div>
+												<div class="exp">
+													<div class="media-left"> <span class="sun">2002 - 2008</span> </div>
+													<div class="media-body">
+														<div class="company-logo">
+															<a href="">
+																<span class="diploma">
+																	Download Certificado
+																</span>
+															</a>
+														</div>
+														<h6>
+															Desenvolvimento Web com PHP
+														</h6>
+														<p>4Linux, EAD</p>
+													</div>
+												</div>
+												<div class="exp">
+													<div class="media-left"> <span class="sun">2002 - 2008</span> </div>
+													<div class="media-body">
+														<div class="company-logo">
+															<a href="">
+																<span class="diploma">
+																	Download Certificado
+																</span>
+															</a>
+														</div>
+														<h6>
+															Desenvolvimento Orientado a objetos com PHP
+														</h6>
+														<p>4Linux, EAD</p>
+													</div>
+												</div>
+												<div class="exp">
+													<div class="media-left"> <span class="sun">2002 - 2008</span> </div>
+													<div class="media-body">
+														<div class="company-logo">
+															<a href="">
+																<span class="diploma">
+																	Download Certificado
+																</span>
+															</a>
+														</div>
+														<h6>
+															Desenvolvimento Enterprise com PHP
+														</h6>
+														<p>4Linux, EAD</p>
+													</div>
+												</div>
+												<div class="exp">
+													<div class="media-left"> <span class="sun">2002 - 2008</span> </div>
+													<div class="media-body">
+														<div class="company-logo">
+															<a href="">
+																<span class="diploma">
+																	Download Certificado
+																</span>
+															</a>
+														</div>
+														<h6>
+															Construindo um PBX IP na prática com Asterisk
+														</h6>
+														<p>4Linux</p>
+														<p>São Paulo, São Paulo, Brasil</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<!-- <div role="tabpanel" class="tab-pane fade" id="portfolio">
+										<div class="inside-sec">
+											<h5 class="tittle">PORTFÓLIO</h5>
+											<section class="portfolio padding-top-50 padding-bottom-50">
+												<ul class="tabs portfolio-filter text-center margin-bottom-30">
+													<li class="filter" data-filter="all">all</li>
+													<li class="filter" data-filter=".brand">Branding</li>
+													<li class="filter" data-filter=".design">designing</li>
+													<li class="filter" data-filter=".photo">photography</li>
+													<li class="filter" data-filter=".visual">visual design</li>
+												</ul>
+												<div id="Container" class="item-space row col-3">
+													<article class="portfolio-item mix  brand">
+														<div class="portfolio-image">
+															<a href="index.html#.">
+																<img class="img-responsive" alt="Open Imagination"
+																	src="images/portfolio/5/img-1.jpg">
+															</a>
+															<div class="portfolio-overlay style-4">
+																<div class="detail-info">
+																	<div class="position-center-center">
+																		<h3 class="no-margin">Assembly Branding</h3>
+																		<span>
+																			<a href="index.html#.">Fashion /
+																				trending</a>
+																		</span>
+																		<a href="index.html#." class="go">
+																			<i class="fa fa-search"></i>
+																		</a>
+																		<a href="index.html#." class="go">
+																			<i class="fa fa-link"></i>
+																		</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</article>
+												</div>
+											</section>
+										</div>
+									</div>
+
+									<div role="tabpanel" class="tab-pane fade" id="blog">
+										<div class="inside-sec">
+											<h5 class="tittle">BLOG</h5>
+											<section
+												class="tab-content blog blog-page padding-20 padding-top-50 padding-bottom-50 ">
+												<div role="tabpanel" class="tab-pane fade in active" id="blog1">
+													<article>
+														<a href="blog-single.html" class="tittle-post">
+															<img class="img-responsive" src="images/blog-img-1.jpg"
+																alt="">
+														</a>
+														<div class="post-info">
+															<div class="post-in">
+																<div class="extra">
+																	<span>
+																		<i class="icon-calendar"></i>
+																		Aug 29, 2015
+																	</span>
+																	<span class="margin-left-15">
+																		<i class="icon-user"></i>
+																		Admin
+																	</span>
+																	<span class="margin-left-15">
+																		<i class="icon-bubbles"></i>
+																		Featured
+																	</span>
+																</div>
+																<a href="blog-single.html" class="tittle-post">
+																	ENJOYING THE SMALL THINGS
+																</a>
+																<p>
+																	It's time to play the music. It's time to light the
+																	lights. It's time to meet the Muppets on the Muppet
+																	Show tonight! Boy the way Glen Miller played Songs
+																	the hit parade. Guys like us we had it made. Those
+																	were the days. These Happy Days are yours and mine
+																	Happy Days.
+																</p>
+																<a href="blog-single.html" class="btn-1">
+																	Read More
+																	<i class="fa fa-angle-right"></i>
+																</a>
+															</div>
+														</div>
+													</article>
+												</div>
+												<ul class="pagination">
+													<li>
+														<a href="#blog1" aria-controls="blog1" role="tab"
+															data-toggle="tab">1</a>
+													</li>
+												</ul>
+											</section>
+										</div>
+									</div>
+
+									<div role="tabpanel" class="tab-pane fade" id="contact">
+										<div class="inside-sec">
+											<h5 class="tittle">Contato</h5>
+											<section>
+												<div
+													class="padding-left-30 padding-right-30 padding-top-50 padding-bottom-50">
+													<div class="row">
+														<div class="col-md-4 text-center">
+															<div
+																class="icon-box ib-style-1 ib-circle ib-bordered ib-bordered-white ib-bordered-thin ib-medium ib-text-alt i-xlarge dark-text">
+																<div class="ib-icon">
+																	<i class="fa fa-mobile text-primary"></i>
+																</div>
+																<div class="ib-info text-dark">
+																	<p>
+																		<a href="https://api.whatsapp.com/send?phone=5518997998362"
+																			target="_blank"> +55 18 9 9799 8362</a>
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="col-md-4 text-center">
+															<div
+																class="icon-box ib-style-1 ib-circle ib-bordered ib-bordered-white ib-bordered-thin ib-medium ib-text-alt i-large">
+																<div class="ib-icon">
+																	<i class="fa fa-map-marker text-primary"></i>
+																</div>
+																<div class="ib-info text-dark">
+																	<p>
+																		Tupi Paulista, São Paulo, Brasil
+																	</p>
+																</div>
+															</div>
+														</div>
+														<div class="col-md-4 text-center">
+															<div
+																class="icon-box ib-style-1 ib-circle ib-bordered ib-bordered-white ib-bordered-thin ib-medium ib-text-alt i-large">
+																<div class="ib-icon">
+																	<i class="fa fa-envelope-o text-primary"></i>
+																</div>
+																<div class="ib-info text-dark">
+																	<p class="no-margin-bottom">
+																		<a href="mailto:leopso1990@gmail.com"
+																			class="text-white" target="_blank">
+																			leopso1990@gmail.com
+																		</a>
+																	</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<section class="map-block">
+													<div class="map-wrapper" id="map-canvas" data-lat="-37.814199"
+														data-lng="144.961560" data-zoom="13" data-style="1"></div>
+													<div class="markers-wrapper addresses-block">
+														<a class="marker" data-rel="map-canvas" data-lat="-37.814199"
+															data-lng="144.961560" data-string="Envato"></a>
+													</div>
+												</section>
+
+												<h5 class="tittle">FICOU COM ALGUMA DÚVIDA?</h5>
+												<div
+													class="contact style-3 light-border padding-top-50 padding-bottom-50 padding-left-20 padding-right-20">
+													<div class="contact-right">
+														<form role="form" id="contact_form_1" class="contact-form"
+															action="mailto:leopso1990@gmail.com" target="_blank">
+															<ul class="row">
+																<li class="col-sm-4">
+																	<label>
+																		<input type="text" class="form-control"
+																			name="name" placeholder="NOME">
+																	</label>
+																</li>
+																<li class="col-sm-4">
+																	<label>
+																		<input type="text" class="form-control"
+																			name="email" placeholder="EMAIL">
+																	</label>
+																</li>
+																<li class="col-sm-4">
+																	<label>
+																		<input type="text" class="form-control"
+																			name="subject" placeholder="ASSUNTO">
+																	</label>
+																</li>
+																<li class="col-sm-12">
+																	<label>
+																		<textarea class="form-control" name="body"
+																			rows="5" placeholder="MENSAGEM"></textarea>
+																	</label>
+																</li>
+																<li class="col-sm-12">
+																	<button type="submit" value="submit">Enviar</button>
+																</li>
+															</ul>
+														</form>
+													</div>
+												</div>
+											</section>
+										</div>
+									</div> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- End Content -->
+
+		<!-- Footer -->
+		<!-- <footer class="footer">
+			<div class="rights">
+				<p>© Copyright 2016 MotiCV. All right reserved.</p>
+			</div>
+		</footer> -->
+		<!-- End Footer -->
+
+	</div>
+	<!-- End Page Wrapper -->
+
+	<!-- JavaScripts -->
+	<script src="js/vendors/jquery/jquery.min.js"></script>
+	<script src="js/vendors/bootstrap.min.js"></script>
+	<script src="js/vendors/owl.carousel.min.js"></script>
+	<script src="js/vendors/jquery.isotope.min.js"></script>
+	<script src="js/main.js"></script>
+
+	<!-- Begin Map Script-->
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+	<script src="js/vendors/map.js"></script>
 </body>
 
 </html>
